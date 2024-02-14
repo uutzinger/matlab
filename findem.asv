@@ -1,0 +1,9 @@
+function [eml,data]=findem(EEM,l)
+
+eml=EEM(2:end,1);
+data=EEM(2:end,find (EEM(1,:)==l));
+
+plot(eml,data);
+o=['Excitation ',num2str(l)];
+title (o);
+hold on;
